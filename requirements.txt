@@ -1,0 +1,12 @@
+# Core dependencies (already installed in your local Python 3.12)
+numpy
+scipy
+pandas
+scikit-image>=0.25
+matplotlib
+imageio
+imagecodecs
+
+# Required by the cells_resnet module
+torch
+torchvision

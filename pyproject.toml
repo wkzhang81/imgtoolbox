@@ -1,0 +1,31 @@
+[project]
+name = "imgtoolbox"
+version = "0.1.0"
+description = "Scientific image processing toolbox based on scikit-image (cells / stitch / dedup / IHC / stain norm / chemiluminescence)."
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "scikit-image>=0.25",
+    "matplotlib>=3.7",
+    "imageio>=2.30",
+]
+
+[project.optional-dependencies]
+# Required by cells_resnet; install torch/torchvision separately for your
+# hardware (CPU/CUDA/XPU). Only the minimum version constraints are declared here.
+deep = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+]
+
+[project.scripts]
+imgtoolbox = "imgtoolbox.ui:launch"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["imgtoolbox*"]

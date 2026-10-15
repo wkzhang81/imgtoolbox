@@ -1,0 +1,18 @@
+[project]
+name = "lum-combine"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "scikit-image>=0.26.0",
+]
+
+[project.scripts]
+lum-combine = "lum_combine:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
